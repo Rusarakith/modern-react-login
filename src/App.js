@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Slide from "@mui/material/Slide";
+import { SnackbarProvider } from "notistack";
+import {
+  createTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@mui/material/styles";
+import Login from "./views/ui/login";
+
+let theme = createTheme({});
+theme = responsiveFontSizes(theme);
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <ThemeProvider theme={theme}>
+      <SnackbarProvider
+        maxSnack={3}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+        TransitionComponent={Slide}
+        domRoot={document.getElementById("notification")}
+      >
+        <Login/>
+      </SnackbarProvider>
+    </ThemeProvider>
   );
 }
 
