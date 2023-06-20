@@ -10,10 +10,15 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import LogoImg from "../assets/sampleLogo.png"
+import facebookIcon from "../assets/facebookIcon.png"
+import googleIcon from "../assets/googleIcon.png"
+import GoogleIcon from '@mui/icons-material/Google';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { width } from "@mui/system";
 
 function Copyright(props) {
   return (
@@ -119,6 +124,26 @@ export default function Login() {
               <Divider>
         <Chip label="OR" />
       </Divider>
+      </Grid>
+      <Grid>
+      <Button
+        variant="outlined"
+        sx={{ mt: 3, mb: 2, ml: "50px", width:"250px" }}
+        startIcon={<img src={googleIcon} height="30px" width="30px"/>}
+        // startIcon={<GoogleIcon/>}
+      >
+        Sign in with Google
+      </Button>
+      </Grid>
+      <Grid>
+      <Button
+        variant="outlined"
+        sx={{  mb: 2, ml: "50px", width:"250px"}}
+        startIcon={<img src={facebookIcon} height="30px" width="30px"/>}
+        // startIcon={<FacebookIcon/>}
+      >
+        Sign in with Facebook
+      </Button>
       </Grid>
               <Button
                 type="submit"
