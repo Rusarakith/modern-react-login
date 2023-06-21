@@ -26,7 +26,7 @@ function App() {
         TransitionComponent={Slide}
         domRoot={document.getElementById("notification")}
       >
-        <Login/>
+        <Login style={1}/>
       </SnackbarProvider>
     </ThemeProvider>
   );
