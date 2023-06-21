@@ -156,7 +156,7 @@ export default function Login({ style }) {
                   <Grid>
                     <Button
                       variant="outlined"
-                      sx={{ mt: 3, mb: 2, ml: "50px", width: "250px" }}
+                      sx={{ mt: 3, mb: 2, ml: "50px", width: "250px", border:"1px solid #000", color:"#000" }}
                       startIcon={
                         <img src={googleIcon} height="30px" width="30px" />
                       }
@@ -168,7 +168,7 @@ export default function Login({ style }) {
                   <Grid>
                     <Button
                       variant="outlined"
-                      sx={{ mb: 2, ml: "50px", width: "250px" }}
+                      sx={{ mb: 2, ml: "50px", width: "250px", border:"1px solid #000", color:"#000"  }}
                       startIcon={
                         <img src={facebookIcon} height="30px" width="30px" />
                       }
@@ -180,8 +180,8 @@ export default function Login({ style }) {
                   <Button
                     type="submit"
                     fullWidth
-                    variant="outlined"
-                    sx={{ mt: 3, mb: 2 }}
+                    variant="contained"
+                    sx={{ mt: 3, mb: 2, height:"50px", color:"#fff", backgroundColor:"#000" }}
                   >
                     Sign In
                   </Button>
@@ -266,6 +266,7 @@ export default function Login({ style }) {
                           id="password"
                           autoComplete="current-password"
                           sx={{ width: "400px" }}
+                          onKeyPress={handleKeypress}
                         />
                         <Grid container pt={2} width="400px">
                           <Grid item xs>
